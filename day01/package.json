@@ -1,0 +1,20 @@
+{
+  "name": "fibonacci",
+  "version": "1.0.0",
+  "description": "Finding fibonacci numbers",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/afeworkt/cs572/settings/pages"
+  },
+  "keywords": [
+    "fibonacci",
+    "numbers",
+    "series"
+  ],
+  "author": "Afework Fita",
+  "license": "ISC"
+}
