@@ -1,0 +1,26 @@
+{
+  "name": "day02_3",
+  "version": "1.0.0",
+  "description": "Write a non-blocking version of your Fibonacci day01 assignment.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afeworkt/cs572.git"
+  },
+  "keywords": [
+    "Fibonacci",
+    "numbers",
+    "node",
+    "express"
+  ],
+  "author": "Afework Temesgen Fita",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/afeworkt/cs572/issues"
+  },
+  "homepage": "https://github.com/afeworkt/cs572#readme"
+}
