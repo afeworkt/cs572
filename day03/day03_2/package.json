@@ -1,0 +1,19 @@
+{
+  "name": "day03_2",
+  "version": "1.0.0",
+  "description": " Write an express application that returns the result of multiplying two numbers provided by the user. One number is given as a path parameter the second number as a queryString",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "NodeJS"
+  ],
+  "author": "Afework Temesgen Fita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

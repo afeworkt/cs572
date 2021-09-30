@@ -1,0 +1,5 @@
+1- Make sure you have mongoDB installed and running on your system. Create a SchoolDB with a students collection. Then add the following documents:
+
+John, 3.1
+James, 2.8
+Jasmin, 3.5

@@ -1,0 +1,20 @@
+{
+  "name": "day03_1",
+  "version": "1.0.0",
+  "description": "To your mean Games application (the one with the static page) add the ability to get all games from json file. (the json file can be found in the resources folder).",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "NodeJS",
+    "Mean"
+  ],
+  "author": "Afework Temesgen Fita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "name": "day03_1",
+  "version": "1.0.0",
+  "description": "Import the games DB found in the resources folder. Then write a NodeJS program to display 6 games from database or as many as the user specifies but not exceeding 9. (this is your mean games project).",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "NodeJS",
+    "Mean"
+  ],
+  "author": "Afework Temesgen Fita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.1.2"
+  }
+}
