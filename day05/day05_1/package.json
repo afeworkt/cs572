@@ -1,0 +1,22 @@
+{
+  "name": "day05_2",
+  "version": "1.0.0",
+  "description": "Create All CRUD operations on mean games project.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "NodeJS",
+    "Mean"
+  ],
+  "author": "Afework Temesgen Fita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongodb": "^4.1.2",
+    "mongoose": "^6.0.8"
+  }
+}

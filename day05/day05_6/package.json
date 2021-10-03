@@ -1,0 +1,21 @@
+{
+  "name": "day05_6",
+  "version": "1.0.0",
+  "description": "6- Create a headless application for your SchoolDB database. (You may, if you feel lazy, just have CRUD for the main document student.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Express",
+    "NodeJS",
+    "Mean"
+  ],
+  "author": "Afework Temesgen Fita",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8"
+  }
+}
