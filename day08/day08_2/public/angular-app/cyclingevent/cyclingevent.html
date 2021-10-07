@@ -1,0 +1,17 @@
+
+<header>
+    <h3>{{vm.title}}</h3>
+    <h4>{{vm.cyclingevent.name}}</h4>
+    <hr>
+</header>
+<article>
+    
+    <div class="search-result">
+        <p>
+            Event name: {{vm.cyclingevent.name}}<BR/> 
+            Country: {{vm.cyclingevent.country}}<BR/> 
+            Start Date: {{vm.cyclingevent.startDate | date:'medium'}}<BR/> 
+            End Date: {{vm.cyclingevent.endDate | date:'medium'}}</BR> 
+        </p>
+    </div>
+</article>

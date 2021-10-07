@@ -1,0 +1,13 @@
+<header>
+    <h3>{{vm.title}}</h3>
+    <hr>
+</header>
+<article>
+    
+    <div class="search-result">
+        <p ng-repeat="event in vm.cyclingEvents">
+            <span class="number">{{$index+1}}</span>
+            <a ng-href="#!/cyclingevent/{{event._id}}">{{event.name}}</a>
+        </p>
+    </div>
+</article>
