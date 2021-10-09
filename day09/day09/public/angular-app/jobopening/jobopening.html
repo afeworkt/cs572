@@ -1,0 +1,27 @@
+<h1>Detail Information about: {{vm.job.title}}</h1>
+<span>Job title:</span> {{vm.job.title}} <br>
+<span>Salary:</span> {{vm.job.salary | currency}} <br>
+<span>Location:</span> {{vm.job.location}} <br>
+<span>Opening Date:</span> {{vm.job.openingDate | date:'medium'}} <br>
+<span>description:</span> <br>
+<span>{{vm.job.description}}</span>
+<h3>Job reviews</h3>
+<h5>Add Review</h5>
+<form name="reviewform" ng-submit="vm.addReview(vm.formdata._id)" validate>
+    Comment:
+    <br>
+   <textarea  ng-model="vm.formdata.reviewText" name="reviewText" rows="2" cols="40"></textarea><br/>
+   <!--  <input type="text" required ng-model="vm.formdata.reviewText" name="reviewText"/> -->
+   Author: <input type="text" required ng-model="vm.formdata.nameOfReviewer" name="nameOfReviewer" /><br/>
+  
+   <button type="submit">Add review</button>
+
+</form>
+<ul>
+    <li ng-repeat="review in vm.job.reviews">
+         
+         {{review.reviewText}} <br>
+         <em>{{review.nameOfReviewer}} - {{review.date |date:"MM/dd/yyyy 'at' h:mma"}}</em>
+         <hr>
+    </li>
+</ul>
