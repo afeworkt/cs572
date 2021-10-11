@@ -1,0 +1,66 @@
+<h3>Cycling Event List</h3>
+<table class="table">
+    <thead>
+        <tr>
+            <td colspan="7">
+                <div class="input-group mb-3">
+                   <!-- <div class="input-group-prepend">
+                    <select class="form-control">
+                        <option value="">...Filter by...</option>
+                        <option value="eventname">Event name</option>
+                        <option value="date">date</option>
+                        <option value="country">country</option>
+                      </select>
+                   </div> -->
+                    <input type="text" class="form-control" ng-model="vm.searchText" placeholder="Search cycling event" aria-label="Search cycling event" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-primary" type="button">Search</button>
+                    </div>
+                  </div>
+                  
+            </td>
+        </tr>
+        <tr>
+            <td colspan="7">
+                <a class="btn btn-primary" href="#!/event" role="button">CREATE NEW</a>
+            </td>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Event name</th>
+        <th scope="col">Country</th>
+        <th scope="col">Start date</th>
+        <th scope="col">End date</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- <div ng-repeat="subject in results.subjects | filter:{grade:'C'}">
+        <input ng-model="subject.title" />
+    </div> -->
+      <tr ng-repeat="ev in vm.events | filter:vm.filterData">
+        <!-- <th scope="row">{{$index+1}}</th> -->
+        <td><a class="link" href="#!/events/{{ev._id}}" role="button">{{ev.name}}</a></td>
+        <td>{{ev.country}}</td>
+        <td>{{ev.startDate |date:'medium'}}</td>
+        <td>{{ev.endDate |date:'medium'}}</td>
+        <td><button type="button" class="btn btn-danger btn-xs" ng-click="vm.deleteEvent(ev._id)">delete</button></td>
+        <td> <a class="btn btn-primary btn-xs" href="#!/event/{{ev._id}}" role="button">Edit</a></td>
+      </tr>
+      </tbody>
+
+      <tfoot>
+          <tr>
+            <td colspan="7">
+              
+            <button class="btn btn-primary btn-xs" ng-click="vm.getAll(vm.offset - vm.limit)" ng-disabled="(vm.offset - vm.limit) < 0">prev</button>
+            <button  class="btn btn-light btn-xs"  ng-repeat="p in [].constructor(vm.pageSize) track by $index"
+            ng-click="vm.getAll($index* vm.limit)" ng-class="{'active': vm.offset===$index * vm.limit}"
+            >
+            {{$index+1}}
+        </button>
+        <button class="btn btn-primary btn-xs" ng-click="vm.getAll(vm.offset + vm.limit)" ng-disabled="(vm.offset + vm.limit) > vm.count">next</button>
+            </td>
+          </tr>
+      </tfoot>
+    </table>

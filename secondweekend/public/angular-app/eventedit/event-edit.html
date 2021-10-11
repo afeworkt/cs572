@@ -1,0 +1,33 @@
+<form>
+    <div>
+        <h3 ng-if="!vm.editing">Create new Cycling event</h3>
+        <h3 ng-if="vm.editing">Edit Cycling event {{vm.formdata.name}}</h3>
+    </div>
+    <div class="form-group">
+      <label for="name">Event Name</label>
+      <input type="text" class="form-control" id="name" ng-model="vm.formdata.name" name="name">
+    </div> 
+    <div class="form-group">
+      <label for="country">Country</label>
+      <input type="text" class="form-control" id="country" ng-model="vm.formdata.country" name="country">
+    </div>
+    <div class="form-group">
+      <label for="startDate">Start date</label>
+      <input type="date" class="form-control" id="startDate" ng-model="vm.formdata.startDate" name="startDate">
+    </div>
+    <div class="form-group">
+      <label for="endDate">Start date</label>
+      <input type="date" class="form-control" id="endDate" ng-model="vm.formdata.endDate" name="endDate">
+    </div>
+    <br>
+    <br>
+    <div>
+        <button ng-if="!vm.editing" type="submit" class="btn btn-primary" ng-click="vm.addNewEvent()">CREATE</button>
+        <button ng-if="vm.editing" type="submit" class="btn btn-primary" ng-click="vm.updateEvent()">Update</button>
+    </div>
+  </form>
+  <!-- {{vm.formdata}} -->
+  <br>
+  <br>
+  <hr>
+  <a class="link" href="#!/events" role="button">Back to List</a>
