@@ -1,0 +1,16 @@
+{
+  "name": "w3day02",
+  "version": "1.0.0",
+  "description": "5- Write a Node webserver using http (node built-in module) to serve three html pages (page1.html, page2.html, page3.html). Also the user may request (index.html?page=1) page is a queryString to identify the page to display (example: index.html?page=2 should display page2.thml).",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "NodeJS",
+    "http"
+  ],
+  "author": "Afework Temesgen Fita",
+  "license": "ISC"
+}

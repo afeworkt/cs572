@@ -1,0 +1,24 @@
+1- Why do we say Node uses an Event-Driven-Architecture?
+This is because most of the nodejs core modules like Http, fs, timers are built around event-driven architecture and we can, of course, use this architecture to our advantage in the code we write. and this concept of events in nodejs is very simple.
+For example: 
+Much of what codes we do in Node.js is based on events. Most of the times we interact with an emitter object and some observers listening for messages.
+In Node.js most events originate from processes, interactions with networks, files, and so on.
+Every event emitter in Node.js has a method named on which takes at least two arguments:
+- the name of the event to listen to
+- a listener function
+The practical example is . starting simple Node.js server:
+
+server.listen(3000,function(){
+    console.log("Server is listening on port: "+server.address().port);
+});
+
+2- Can you write Node code that is not event driven? Why?
+   Yes we can write a node code that is not event driven.
+   Because, our business logic or code might not need to be implemented on an event driven way.
+   For example: we can write simple expression x= 1+2; print it on consolo.log(x); 
+   
+3- Why does Chrome use a layout tree? 
+The layout is a process to find the geometry of elements.
+The main thread walks through the DOM and computed styles and creates the layout tree which has information like x y coordinates and bounding box sizes.
+Layout tree may be similar structure to the DOM tree, but it only contains information related to what's visible on the page. 
+If display: none is applied, that element is not part of the layout tree (however, an element with visibility: hidden is in the layout tree).
