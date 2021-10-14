@@ -1,0 +1,13 @@
+<!-- <pre>{{game|json}}</pre> -->
+<H1>Information about game: <p>{{game?.title}}</p>
+</H1>
+<p>
+    Price: {{game?.price | currency}} <br>
+    Minimum Players: {{game?.minPlayers}}<br>
+    Maximum Players: {{game?.maxPlayers}}<br>
+    Minimum Age: {{game?.minAge}}<br>
+</p>
+<hr>
+<button class="btn link" (click)="goBack()">Back to games list</button>
+
+<!-- Publisher: {{game.publisher.name}} -->
