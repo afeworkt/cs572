@@ -1,0 +1,29 @@
+<table class="table">
+     <thead>
+         <tr>
+             <th>Game List</th>
+             <th colspan="2"><a class="btn btn-success btn-xs" routerLink="/games/add" role="button">Add New</a></th>
+ 
+         </tr>
+     </thead>
+     <tbody  *ngFor="let game of games">
+         <tr>
+             <td> <a routerLink="/game/{{game._id}}">{{game.title}} </a></td>
+             <td colspan="2">
+                 <a class="btn btn-primary btn-xs" routerLink="/games/{{game._id}}" role="button">Edit</a> 
+                 <span style="width: 20px;display: inline-block;"></span>
+                 <button class="btn btn-danger btn-xs" (click)="deleteGame(game._id)">Delete</button>
+             </td>
+         </tr>
+     </tbody>
+     <tfoot>
+         <tr>
+             <td colspan="3">
+                 <button class="btn btn-primary btn-xs" (click)="previous()">Previous</button>
+                 <span style="width: 20px;display: inline-block;"></span>
+ 
+                 <button class="btn btn-primary btn-xs" (click)="next()">Next</button> 
+             </td>
+         </tr>
+     </tfoot>
+ </table>

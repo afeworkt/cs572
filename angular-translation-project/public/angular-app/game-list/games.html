@@ -1,0 +1,29 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>{{vm.title}}</th>
+            <th colspan="2"><a class="btn btn-success btn-xs" href="#!/game/add" role="button">Add New</a></th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="game in vm.games">
+            <td> <a ng-href="#!/game/{{game._id}}">{{game.title}}</a></td>
+            <td colspan="2">
+                <a class="btn btn-primary btn-xs" href="#!/games/{{game._id}}" role="button">Edit</a>
+                <span style="width: 20px;display: inline-block;"></span>
+                <button class="btn btn-danger btn-xs" ng-click="vm.deleteGame(game._id)">Delete</button>
+            </td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <td colspan="3">
+                <button class="btn btn-primary btn-xs" ng-click="vm.previous()">Previous</button>
+                <span style="width: 20px;display: inline-block;"></span>
+
+                <button class="btn btn-primary btn-xs" ng-click="vm.next()">Next</button> 
+            </td>
+        </tr>
+    </tfoot>
+</table>

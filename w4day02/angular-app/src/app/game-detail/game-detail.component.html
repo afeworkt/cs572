@@ -1,0 +1,15 @@
+<H1>Information about game:
+    <p>{{game?.title}} 
+      <app-game-rating *ngIf="game" [numstars]="game.rate"></app-game-rating>
+</p>  
+</H1> 
+<p>
+   Price: {{game?.price | currency}}<br> 
+   Minimum Players: {{game?.minPlayers}}<br> 
+   Maximum Players: {{game?.maxPlayers}}<br> 
+   Minimum Age: {{game?.minAge}} <br> 
+   Publisher: {{game?.publisher.name}}
+</p>
+<p>  
+   <button class="btn link" (click)="goBack()">Back to List</button>
+</p>

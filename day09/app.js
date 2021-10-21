@@ -11,9 +11,14 @@
 
  app.use("/node_modules",express.static(path.join(__dirname,'node_modules')));
  app.use(express.static(path.join(__dirname,'public')));
- 
+ app.use(function(req,res,next){
+
+       next();
+ });
  app.use("/api", routes);
 
  const server = app.listen(app.get('port'),function(){
         console.log('App listening on port: '+ server.address().port);
  });
+
+ 

@@ -1,0 +1,65 @@
+
+<form name="vm.myForm" novalidate>
+    <div>
+        <h6 ng-if="!vm.editing">Add new game</h6>
+        <h6 ng-if="vm.editing">Edit game {{vm.formdata.title}}</h6>
+        <p class="text-danger" ng-if="vm.message.content && !vm.message.success">{{vm.message.content}}</p>
+        <p class="text-success" ng-if="vm.message.content  && vm.message.success">{{vm.message.content}}</p>
+    </div>
+    <hr>
+    <div style="width: 80%;">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" ng-model="vm.formdata.title" name="title" required>
+      <span class="text-danger" ng-show="vm.myForm.title.$dirty && vm.myForm.title.$invalid && vm.isSubmitted">Please enter title! </span>
+    </div> 
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="number" class="form-control" id="year" ng-model="vm.formdata.year" name="year" required>
+      <span class="text-danger" ng-show="vm.myForm.year.$dirty && vm.myForm.year.$invalid && vm.isSubmitted">Please enter year! </span>
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" ng-model="vm.formdata.price" name="price" required>
+      <span class="text-danger" ng-show="vm.myForm.price.$dirty && vm.myForm.price.$invalid && vm.isSubmitted">Please enter price! </span>
+    </div>
+    <div class="form-group">
+      <label for="rate">Rate</label>
+      <input type="number" class="form-control" id="rate" ng-model="vm.formdata.rate" name="rate" required="" min="1" max="5" onlyinteger>
+      <span class="text-danger" ng-show="vm.myForm.rate.$error.onlyinteger">The value is not a valid integer!</span>
+      <span class="text-danger" ng-show="vm.formdata.rate && (vm.myForm.rate.$error.min || vm.myForm.size.$error.max)">
+        The value must be in range 0 to 5!</span>
+        <span class="text-danger" ng-show="vm.myForm.rate.$dirty && vm.myForm.rate.$invalid && vm.isSubmitted">Please enter rate! </span>
+    </div>
+    <div class="form-group">
+      <label for="minAge">Min Age</label>
+      <input type="number" class="form-control" id="minAge" ng-model="vm.formdata.minAge" name="minAge" required>
+      <span class="text-danger" ng-show="vm.myForm.minAge.$dirty && vm.myForm.minAge.$invalid && vm.isSubmitted">Please enter Min Age! </span>
+    </div>
+    <div class="form-group">
+      <label for="minPlayers">Min Players</label>
+      <input type="number" class="form-control" id="minPlayers" ng-model="vm.formdata.minPlayers" name="minPlayers" required>
+      <span class="text-danger" ng-show="vm.myForm.minPlayers.$dirty && vm.myForm.minPlayers.$invalid && vm.isSubmitted">Please enter Min Players! </span>
+    </div>
+    <div class="form-group">
+      <label for="maxPlayers">Max Players</label>
+      <input type="number" class="form-control" id="maxPlayers" ng-model="vm.formdata.maxPlayers" name="maxPlayers" required>
+      <span class="text-danger" ng-show="vm.myForm.maxPlayers.$dirty && vm.myForm.maxPlayers.$invalid && vm.isSubmitted">Please enter Max Players! </span>
+    </div>
+    <div class="form-group">
+      <label for="designers">Designers</label>
+      <input type="text" class="form-control" id="designers" ng-model="vm.formdata.designers" name="designers" required>
+      <span class="text-danger" ng-show="vm.myForm.designers.$dirty && vm.myForm.designers.$invalid && vm.isSubmitted">Please enter Designer! </span>
+   
+    </div>
+    <br>
+    <div>
+        <button ng-if="!vm.editing" type="submit" class="btn btn-primary" ng-click="vm.addNewGame()">CREATE</button>
+        <button ng-if="vm.editing" type="submit" class="btn btn-primary" ng-click="vm.updateGame()">Update</button>
+    </div>
+  </div>
+  </form>
+  <br>
+  <p>  <a class="link" href="#!/games" role="button">Back to List</a></p>
+  <br>
+  <br>

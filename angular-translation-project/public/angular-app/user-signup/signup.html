@@ -1,0 +1,30 @@
+<form name="vm.myForm" novalidate>
+    <div>
+        <h5>Create Account</h5>
+        <p class="text-danger" ng-if="vm.message">{{vm.message}}</p>
+    </div>
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" ng-model="vm.formdata.name" name="name" required>  
+      <span class="text-danger" ng-show="vm.myForm.name.$dirty && vm.myForm.name.$invalid && vm.isSubmitted">Please enter name! </span>
+    </div> 
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" class="form-control" id="username" ng-model="vm.formdata.username" name="username" required> 
+       <span class="text-danger" ng-show="vm.myForm.username.$dirty && vm.myForm.username.$invalid && vm.isSubmitted">Please enter username! </span>
+    </div>
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" class="form-control" id="password" ng-model="vm.formdata.password" name="password" required>  
+      <span class="text-danger" ng-show="vm.myForm.password.$dirty && vm.myForm.password.$invalid && vm.isSubmitted">Please enter password! </span>
+    </div>
+    <div class="form-group">
+      <label for="retypepassword">Retype-Password</label>
+      <input type="password" class="form-control" id="retypepassword" ng-model="vm.formdata.retypepassword" name="retypepassword" required>  
+      <span class="text-danger" ng-show="vm.myForm.retypepassword.$dirty && vm.myForm.retypepassword.$invalid && vm.isSubmitted">Please retype password! </span>
+    </div>
+    <br>
+    <div>
+        <button type="submit" class="btn btn-primary" ng-click="vm.signup()" ng-disabled="vm.myForm.$invalid">REGISTER</button>
+    </div>
+  </form>

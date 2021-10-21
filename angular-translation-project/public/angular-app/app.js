@@ -7,9 +7,21 @@ function config($routeProvider){
         templateUrl:"angular-app/game-list/games.html",
         controller:"GamesController",
         controllerAs:"vm"
+    }).when("/games/:gameId",{
+        templateUrl:"angular-app/game-edit/game-edit.html",
+        controller:"GameEditController",
+        controllerAs:"vm"
+    }).when("/game/add",{
+        templateUrl:"angular-app/game-edit/game-edit.html",
+        controller:"GameEditController",
+        controllerAs:"vm"
     }).when("/game/:gameId",{
         templateUrl:"angular-app/game/game.html",
         controller:"GameController",
+        controllerAs:"vm"
+    }).when("/register",{
+        templateUrl:"angular-app/user-signup/signup.html",
+        controller:"SignupController",
         controllerAs:"vm"
     }).otherwise({
         redirectTo:"/"

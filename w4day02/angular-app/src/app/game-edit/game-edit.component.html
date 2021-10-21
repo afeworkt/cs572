@@ -1,0 +1,80 @@
+
+  <form [formGroup]="gameForm" (ngSubmit)="saveGame()" novalidate>
+    <div>
+        <h6 *ngIf="!editing">Add new game</h6>
+        <h6 *ngIf="editing">Edit game {{game?.title}}</h6>
+        <p class="text-danger" *ngIf="message.content && !message.success">{{message.content}}</p>
+        <p class="text-success" *ngIf="message.content && message.success">{{message.content}}</p>
+       
+    </div>
+    <hr>
+    <div style="width: 80%;">
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input type="text" class="form-control" id="title" formControlName="title" name="title" required>
+      <div *ngIf="submitted && f.title.touched && f.title.invalid">
+        <span  *ngIf="f.title.errors?.required"  class="text-danger">Please enter title!</span>
+   </div>
+    </div> 
+    <div class="form-group">
+      <label for="year">Year</label>
+      <input type="number" class="form-control" id="year" formControlName="year" name="year" required>
+      <div *ngIf="submitted && f.year.touched && f.year.invalid">
+        <span  *ngIf="f.year.errors?.required"  class="text-danger">Please enter year!</span>
+   </div> 
+    </div>
+    <div class="form-group">
+      <label for="price">Price</label>
+      <input type="number" class="form-control" id="price" formControlName="price" name="price" required>
+      <div *ngIf="submitted && f.price.touched && f.price.invalid">
+        <span  *ngIf="f.year.errors?.required"  class="text-danger">Please enter price!</span>
+   </div> 
+    </div>
+    <div class="form-group">
+      <label for="rate">Rate</label>
+      <input type="number" class="form-control" id="rate" formControlName="rate" name="rate" required="" min="1" max="5" onlyinteger>
+      <div *ngIf="submitted && f.rate.touched && f.rate.invalid">
+        <span  *ngIf="f.rate.errors?.required"  class="text-danger">Please enter rate!</span>
+   </div>   
+    </div>
+    <div class="form-group">
+      <label for="minAge">Min Age</label>
+      <input type="number" class="form-control" id="minAge" formControlName="minAge" name="minAge" required>
+      <div *ngIf="submitted && f.year.touched && f.year.invalid">
+        <span  *ngIf="f.year.errors?.required"  class="text-danger">Please enter year!</span>
+   </div> 
+    </div>
+    <div class="form-group">
+      <label for="minPlayers">Min Players</label>
+      <input type="number" class="form-control" id="minPlayers" formControlName="minPlayers" name="minPlayers" required>
+      <div *ngIf="submitted && f.minPlayers.touched && f.minPlayers.invalid">
+        <span  *ngIf="f.minPlayers.errors?.required"  class="text-danger">Please enter Min Players!</span>
+   </div> 
+    </div>
+    <div class="form-group">
+      <label for="maxPlayers">Max Players</label>
+      <input type="number" class="form-control" id="maxPlayers" formControlName="maxPlayers" name="maxPlayers" required>
+      <div *ngIf="submitted && f.maxPlayers.touched && f.maxPlayers.invalid">
+        <span  *ngIf="f.maxPlayers.errors?.required"  class="text-danger">Please enter Max Players!</span>
+   </div> 
+    </div>
+    <div class="form-group">
+      <label for="designers">Designers</label>
+      <input type="text" class="form-control" id="designers" formControlName="designers" name="designers" required>
+      <div *ngIf="submitted && f.designers.touched && f.designers.invalid">
+        <span  *ngIf="f.designers.errors?.required"  class="text-danger">Please enter Designers!</span>
+   </div>  
+    </div>
+    <br>
+    <div>
+        <button *ngIf="!editing" type="submit" class="btn btn-primary"  [disabled]="!gameForm.valid">CREATE</button>
+        <button *ngIf="editing" type="submit" class="btn btn-primary"  [disabled]="!gameForm.valid">Update</button>
+    </div>
+  </div>
+  </form>
+  <br>
+  <p>
+        <!-- <a class="link" a="#!/games" role="button">Back to List</a> -->
+</p>
+  <br>
+  <br>
